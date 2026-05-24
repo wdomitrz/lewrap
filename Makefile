@@ -3,12 +3,12 @@
 all: fix lint test
 
 lint:
-	ruff check .
-	basedpyright --project pyproject.toml --level error .
+	uv run ruff check .
+	uv run basedpyright --project pyproject.toml --level error .
 
 fix:
-	ruff check --extend-select I --fix-only --fix .
-	ruff format .
+	uv run ruff check --extend-select I --fix-only --fix .
+	uv run ruff format .
 
 test:
-	python3 -m doctest README.md $(wildcard *.py)
+	uv run python -m doctest README.md $(wildcard *.py)
