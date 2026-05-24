@@ -1,0 +1,33 @@
+[tool.ruff]
+target-version = "py310"
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "C408",
+    "C901",
+    "COM8",
+    "D",
+    "E501",
+    "EM101",
+    "EM102",
+    "INP001",
+    "LOG015",
+    "PLR09",
+    "RET505",
+    "RUF005",
+    "S101",
+    "S301",
+    "S603",
+    "S607",
+    "T2",
+    "TC002",
+    "TC003",
+    "TC006",
+    "TRY003",
+]
+extend-select = ["I"]
+
+[tool.pyright]
+pythonVersion = "3.10"
+typeCheckingMode = "all"
+exclude = []
